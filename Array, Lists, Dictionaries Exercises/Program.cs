@@ -10,7 +10,7 @@ namespace Array__Lists__Dictionaries_Exercises
         {
             string continueFlag;
             do
-            {
+            { 
                 #region exercise37
 
                 int[] myArray = new int[5];
@@ -78,6 +78,10 @@ namespace Array__Lists__Dictionaries_Exercises
                 age.Add("Lindsey", 08);
                 age.Add("John", 64);
 
+
+                bool keyExists = age.ContainsKey(userInput);
+
+                if (keyExists)
                 foreach (KeyValuePair<string, int> name in age)
                 {
                     if (name.Key == userInput)
@@ -85,12 +89,10 @@ namespace Array__Lists__Dictionaries_Exercises
                         Console.WriteLine($"{name.Key} is {name.Value} years old");
                     }
 
-                    //else if (name.Key != userInput)
-                    //{
-                    //    Console.WriteLine($"{name.Key} is not a student here");
-                    //}
-
-
+                }
+                else 
+                {
+                    Console.WriteLine($"{userInput} is not a student here");
                 }
 
                 #endregion
